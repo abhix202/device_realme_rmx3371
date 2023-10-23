@@ -12,21 +12,23 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/realme/rmx3371/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/blaze/config/common_full_phone.mk)
+$(call inherit-product, vendor/superior/config/common.mk)
 
-# Blaze Official Stuff
-BLAZE_MAINTAINER := bibindasb
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_GAPPS_ARCH := arm64
-TARGET_INCLUDE_STOCK_ARCORE := true
-TARGET_SUPPORTS_BLUR := true
+# Rom Stuff
+SYSTEM_OPTIMIZE_JAVA := true
+SYSTEMUI_OPTIMIZE_JAVA := true
+TARGET_FACEUNLOCK_SUPPORTED := true
+BUILD_WITH_GAPPS := true
+TARGET_CORE_GMS := true
+USE_QUICKPIC := true
+USE_MOTO_CALCULATOR := true
+USE_DUCKDUCKGO := true
+TARGE_SUPPORTS_BLUR := true
+SUPERIOR_UDFPS_ANIMATIONS := true
 TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_USE_PIXEL_CHARGER := true
-TARGET_FACE_UNLOCK_SUPPORTED := true
-EXTRA_UDFPS_ANIMATIONS := true
-WITH_GAPPS := true
+TARGET_INCLUDE_PIXEL_CHARGER := true
 
-PRODUCT_NAME := blaze_rmx3371
+PRODUCT_NAME := superior_rmx3371
 PRODUCT_DEVICE := rmx3371
 PRODUCT_MANUFACTURER := realme
 PRODUCT_BRAND := realme
@@ -43,3 +45,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_PRODUCT=$(PRODUCT_SYSTEM_NAME)
 
 BUILD_FINGERPRINT := realme/RMX3371/RE54E4L1:13/TP1A.220905.001/S.cd290a_d5d0-4:user/release-keys
+# Maintainer
+PRODUCT_SYSTEM_PROPERTIES += \
+     ro.spos.maintainer=abhix202

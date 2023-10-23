@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/blaze_rmx3371.mk
+    $(LOCAL_DIR)/superior_rmx3371.mk
 
 COMMON_LUNCH_CHOICES := \
-    blaze_rmx3371-user \
-    blaze_rmx3371-userdebug \
-    blaze_rmx3371-eng
+    superior_rmx3371-user \
+    superior_rmx3371-userdebug \
+    superior_rmx3371-eng
